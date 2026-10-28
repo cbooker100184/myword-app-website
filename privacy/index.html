@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — My Word</title>
+  <meta name="description" content="Privacy Policy for the My Word app, operated by MY WORD APP LTD.">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <img src="/assets/logo.png" width="40" height="40" alt="">
+      My Word
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/privacy/" aria-current="page">Privacy</a>
+      <a href="/delete-account/">Delete account</a>
+    </nav>
+  </header>
+
+  <main class="policy">
+    <p class="draft-banner">
+      <strong>Draft for publication.</strong>
+      This page describes the My Word product as implemented in the app.
+      Items marked <span class="needs-confirm">needs confirmation</span> are not yet decided or verified and must be confirmed before you treat this policy as final.
+    </p>
+
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="meta">
+      Operator: MY WORD APP LTD · Company number 17476778 · United Kingdom<br>
+      Privacy contact: <a href="mailto:info@myword-app.com">info@myword-app.com</a><br>
+      Website: myword-app.com<br>
+      Effective date: <span class="needs-confirm">not yet adopted</span>
+    </p>
+
+    <h2>1. Who is responsible</h2>
+    <p>
+      The controller of personal data for My Word is <strong>MY WORD APP LTD</strong>,
+      a company registered in the United Kingdom, company number <strong>17476778</strong>.
+    </p>
+    <p>
+      Registered office: <span class="needs-confirm">required before publication — do not invent this address</span>.
+    </p>
+    <p>
+      Privacy enquiries: <a href="mailto:info@myword-app.com">info@myword-app.com</a>.
+      That email is the everyday contact. It is not a substitute for a registered office on company communications that require one.
+    </p>
+    <p>
+      If you are in the United Kingdom, you can complain to the Information Commissioner’s Office (ICO).
+      Whether MY WORD APP LTD has paid the data protection fee, and any ICO registration number:
+      <span class="needs-confirm">needs confirmation</span>.
+    </p>
+
+    <h2>2. What My Word does</h2>
+    <p>
+      My Word is a goal and accountability app. You create Challenges, track Wins and Slip-ups,
+      and optionally involve other people. A Pledge is optional, private, and not a debt.
+      “Support My Word” is a separate optional contribution.
+    </p>
+    <p>
+      My Word does not provide medical, nutritional, psychological, or financial advice.
+      It does not read Apple Health, Google Fit, contacts, or location.
+    </p>
+
+    <h2>3. Information My Word uses</h2>
+
+    <h3>3.1 Account and authentication</h3>
+    <p>
+      Sign-up asks for a display name, email address, and password (at least 6 characters).
+      Authentication is handled by Supabase Auth. The app stores the display name in your account metadata and in a profile.
+      Sign-in uses email and password. Password reset and email change are available in the account settings.
+      Apple sign-in and Google sign-in are not implemented.
+      The app does not ask for your age or date of birth.
+    </p>
+
+    <h3>3.2 Profile and photos</h3>
+    <p>
+      Profiles store a display name (unique without regard to capital letters).
+      A deleted display name is reserved so it cannot be reused.
+      On web, a profile photo can be stored as image data on your profile.
+      On the current iOS and Android build, photo picking is not available.
+      People who can see your profile in the product may see that photo.
+    </p>
+
+    <h3>3.3 Challenges, Wins, Slip-ups, and history</h3>
+    <p>
+      A Challenge can include the title, the words you typed, dates, repeat pattern,
+      required Wins, Slip-up allowance, outcome, and status.
+      Check-ins record Wins and Slip-ups and can include a note.
+      Progress is self-reported.
+    </p>
+
+    <h3>3.4 Friends, invitations, and Joint Challenges</h3>
+    <p>
+      My Word does not offer a public directory of all users.
+      Invitation links use tokens. People you invite, or who join a Joint Challenge with you,
+      can see Challenge progress according to the product rules.
+      Pledge amounts are not shared with followers.
+      Share actions use the device share sheet and can include the Challenge title and a link, not the Pledge.
+    </p>
+
+    <h3>3.5 Pledges, settlements, and Support My Word</h3>
+    <p>
+      A Pledge is optional. No card payment is taken when a Challenge is created.
+      If a Challenge is unsuccessful, you may be invited to honour an amount, choose a lower amount, or settle at £0.
+      Card payments are processed by <strong>Stripe</strong>. My Word stores amounts, statuses, and Stripe identifiers
+      (such as PaymentIntent ids). Card numbers and CVCs are entered in Stripe’s fields and are not stored as card numbers in My Word’s own tables.
+      Currency for these flows is GBP.
+    </p>
+    <p>
+      Whether a stored Stripe webhook payload contains card brand, last four digits, billing details, or email:
+      <span class="needs-confirm">needs inspection of a redacted payload before claiming a specific shape</span>.
+    </p>
+    <p>
+      Stripe’s own systems hold the payment method. Those records are not deleted by My Word’s account-deletion function.
+    </p>
+
+    <h3>3.6 Analytics and Secret Sauce</h3>
+    <p>
+      Product analytics can store event names, properties, platform, app version, and sometimes Challenge ids.
+      Some analytics rows keep a record after account deletion with the user id cleared.
+      The “Secret Sauce” setup step stores a variant and related Challenge-shape fields linked to your account;
+      those rows are removed when the profile is deleted (cascade).
+      There is no advertising SDK and no crash-reporting SDK such as Sentry or Firebase Crashlytics in the app package.
+    </p>
+
+    <h3>3.7 Device storage, notifications, and feedback</h3>
+    <p>
+      Auth sessions are persisted on the device. Notification preferences can be stored.
+      Local reminders may be scheduled on iOS and Android after permission is granted.
+      Feedback can include text, platform, app version, and an optional screenshot stored in private cloud storage under your user id.
+    </p>
+
+    <h3>3.8 Reports and blocks</h3>
+    <p>
+      Where enabled in the product, you can report content and block another person.
+      Reports are read by MY WORD APP LTD at info@myword-app.com.
+      The target is an initial response within 3 business days. That is a first reply, not a promise of resolution in that time.
+    </p>
+
+    <h2>4. Why this information is used</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Purpose</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Provide the service</td>
+          <td>Account, Challenges, progress, invitations, Joint Challenges, local reminders</td>
+        </tr>
+        <tr>
+          <td>Optional payments</td>
+          <td>Pledge settlement and Support contributions through Stripe</td>
+        </tr>
+        <tr>
+          <td>Financial records</td>
+          <td>Amounts, statuses, Stripe identifiers; anonymised archive rows where the schema copies them</td>
+        </tr>
+        <tr>
+          <td>Product analytics</td>
+          <td>Secret Sauce, funnels, usage events</td>
+        </tr>
+        <tr>
+          <td>Support and safety</td>
+          <td>Feedback, reports, blocks</td>
+        </tr>
+        <tr>
+          <td>Security</td>
+          <td>Auth sessions, access controls, webhook signature checks</td>
+        </tr>
+        <tr>
+          <td>Display-name integrity</td>
+          <td>Reservation of a name after deletion</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Lawful basis for each purpose under UK GDPR:
+      <span class="needs-confirm">needs legal confirmation — this page does not assign contract, legitimate interests, or consent</span>.
+    </p>
+
+    <h2>5. Who receives information</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Recipient</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Supabase</td>
+          <td>Database, authentication, file storage, Edge Functions</td>
+        </tr>
+        <tr>
+          <td>Stripe</td>
+          <td>Card payment processing for Pledges and Support</td>
+        </tr>
+        <tr>
+          <td>Apple / Google</td>
+          <td>App store distribution and operating-system services (for example notification permission)</td>
+        </tr>
+        <tr>
+          <td>People you invite or join with</td>
+          <td>Challenge progress you have given them access to; not your Pledge amount</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      My Word does not sell personal data. No advertising or data-broker SDK is installed in the inspected app package.
+      Processor contracts and a full subprocessor list: <span class="needs-confirm">needs confirmation</span>.
+    </p>
+
+    <h2>6. International transfers</h2>
+    <p>
+      Production database hosting has been recorded as Central EU for the production Supabase project.
+      Stripe, Apple, Google, backups, logs, and transfer safeguards (for example adequacy decisions or standard contractual clauses):
+      <span class="needs-confirm">needs confirmation</span>.
+    </p>
+
+    <h2>7. Security</h2>
+    <ul>
+      <li>Row level security is enabled on application tables.</li>
+      <li>Payment creation requires a signed-in user.</li>
+      <li>The Stripe webhook rejects missing or invalid Stripe signatures.</li>
+      <li>Stripe secret keys are server secrets, not public client values.</li>
+      <li>Clients cannot mark a settlement as succeeded; the webhook writes that status.</li>
+    </ul>
+    <p>
+      This policy does not claim named certifications (for example SOC 2 or ISO 27001) that are not evidenced in the product repository.
+    </p>
+
+    <h2>8. How long information is kept</h2>
+    <p>
+      No retention period is configured in the app schema as a scheduled deletion job.
+      How long each category of information is kept:
+      <span class="needs-confirm">undecided — pending legal and accounting review; this page does not state three years or six years as a product period</span>.
+    </p>
+    <p>
+      What account deletion does in the product database is summarised in the
+      <a href="/delete-account/">Delete account</a> page.
+    </p>
+
+    <h2>9. Account deletion</h2>
+    <p>
+      In the app: <strong>Settings → Account → Delete Account</strong>. You must confirm.
+      People who cannot sign in can email <a href="mailto:info@myword-app.com">info@myword-app.com</a>
+      from the address on the account and ask for deletion.
+      See <a href="/delete-account/">Delete your account</a> for what is removed and what can remain.
+    </p>
+
+    <h2>10. Your rights</h2>
+    <p>
+      If UK GDPR applies, you may have rights including access, correction, erasure, restriction, objection, and portability,
+      and rights in relation to automated decision-making.
+      How each right is exercised, response times, and identity checks:
+      <span class="needs-confirm">needs confirmation</span>.
+      Requests can be sent to <a href="mailto:info@myword-app.com">info@myword-app.com</a>.
+    </p>
+
+    <h2>11. Children</h2>
+    <p>
+      The minimum age is 18. My Word is not directed at children.
+      The sign-up form does not yet ask for age.
+      How 18+ will be enforced before store submission: <span class="needs-confirm">needs confirmation</span>.
+      Parents who believe a child has created an account can write to info@myword-app.com.
+    </p>
+
+    <h2>12. Changes</h2>
+    <p>
+      How changes to this policy will be notified:
+      <span class="needs-confirm">needs confirmation</span>.
+    </p>
+
+    <h2>What still needs confirming before treating this as final</h2>
+    <ul class="confirm-list">
+      <li>Registered office address (and part of the UK on the certificate, if required on the site)</li>
+      <li>Effective / adoption date</li>
+      <li>ICO data protection fee / registration status</li>
+      <li>Lawful bases for each processing purpose</li>
+      <li>Retention periods (including the anonymised financial archive)</li>
+      <li>Processor contracts and international transfer safeguards</li>
+      <li>Exact contents of Stripe webhook payloads</li>
+      <li>How 18+ will be enforced</li>
+      <li>Legal review of this policy</li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/delete-account/">Delete account</a>
+    </nav>
+    <p>© MY WORD APP LTD · Company number 17476778 · United Kingdom</p>
+    <p>Registered office: <span class="needs-confirm">to confirm before publication</span></p>
+  </footer>
+</body>
+</html>

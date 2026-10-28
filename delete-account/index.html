@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete your account — My Word</title>
+  <meta name="description" content="How to delete your My Word account and what happens to your data.">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">
+      <img src="/assets/logo.png" width="40" height="40" alt="">
+      My Word
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/delete-account/" aria-current="page">Delete account</a>
+    </nav>
+  </header>
+
+  <main class="policy">
+    <p class="draft-banner">
+      <strong>Draft for publication.</strong>
+      In-app account deletion is implemented. Items marked
+      <span class="needs-confirm">needs confirmation</span>
+      are not decided periods or unverified edge cases.
+    </p>
+
+    <h1 class="page-title">Delete your account</h1>
+    <p class="meta">
+      Operator: MY WORD APP LTD · Company number 17476778 · United Kingdom<br>
+      Contact: <a href="mailto:info@myword-app.com">info@myword-app.com</a><br>
+      Registered office: <span class="needs-confirm">required before publication</span>
+    </p>
+
+    <h2>Delete in the app</h2>
+    <p>
+      If you can sign in to My Word:
+    </p>
+    <ol>
+      <li>Open <strong>Settings</strong>.</li>
+      <li>Open <strong>Account</strong>.</li>
+      <li>Tap <strong>Delete Account</strong>.</li>
+      <li>Confirm the dialog titled <strong>DELETE ACCOUNT?</strong></li>
+    </ol>
+    <p>
+      The confirmation explains that deletion is permanent and that your display name
+      will remain unavailable and cannot be reused. Cancel does nothing.
+      Confirm runs deletion for the account you are signed in as, then signs you out.
+    </p>
+    <p>
+      This flow is implemented in the app (Settings → Account). It uses the current session only;
+      it does not accept another person’s account id.
+    </p>
+
+    <h2>If you cannot sign in</h2>
+    <p>
+      Email <a href="mailto:info@myword-app.com">info@myword-app.com</a>
+      from the email address on the account.
+      Use the subject line: <strong>Delete my My Word account</strong>.
+    </p>
+    <p>
+      Response times and identity checks for email requests:
+      <span class="needs-confirm">needs confirmation</span>.
+    </p>
+
+    <h2>What deletion removes in My Word</h2>
+    <p>
+      When deletion succeeds, My Word removes the profile and related data that cascades with the account
+      in the product database, including Challenges you own, progress tied to that account,
+      feedback rows, Pledge and settlement rows tied to the account, and Support contribution rows in My Word.
+      You are signed out.
+    </p>
+
+    <h2>What can remain</h2>
+    <ul>
+      <li>
+        <strong>Display name.</strong> Your display name stays reserved so someone else cannot take it.
+        How long names stay reserved: <span class="needs-confirm">needs confirmation</span>.
+      </li>
+      <li>
+        <strong>Anonymised financial archive.</strong>
+        Before Pledge rows are removed, amounts, statuses, and Stripe identifiers can be copied into an anonymised financial archive without the Challenge title.
+        How long that archive is kept: <span class="needs-confirm">undecided — pending legal and accounting review; this page does not state a period</span>.
+      </li>
+      <li>
+        <strong>Usage events.</strong> Some analytics events can remain without your account id.
+      </li>
+      <li>
+        <strong>Stripe.</strong> Payment records held by Stripe are not deleted by the in-app deletion button.
+      </li>
+      <li>
+        <strong>Backups and logs.</strong> Provider backups and server logs are not erased at the moment you press the button.
+        Retention windows: <span class="needs-confirm">needs confirmation</span>.
+      </li>
+      <li>
+        <strong>Feedback screenshots.</strong> Feedback rows cascade away; files in storage may need a separate cleanup step.
+        <span class="needs-confirm">needs confirmation that production cleanup covers leftover files</span>.
+      </li>
+    </ul>
+    <p>
+      Deletion cannot be undone for the data the deletion removes.
+      Do not read this page as a promise that every copy everywhere is erased instantly.
+    </p>
+
+    <h2>More detail</h2>
+    <p>
+      See the <a href="/privacy/">Privacy Policy</a> for how My Word uses personal data,
+      including Supabase hosting and Stripe payments.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <nav aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/privacy/">Privacy Policy</a>
+      <a href="/delete-account/">Delete account</a>
+    </nav>
+    <p>© MY WORD APP LTD · Company number 17476778 · United Kingdom</p>
+    <p>Registered office: <span class="needs-confirm">to confirm before publication</span></p>
+  </footer>
+</body>
+</html>

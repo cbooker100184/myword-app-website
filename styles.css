@@ -1,0 +1,373 @@
+:root {
+  --bg: #eef5f7;
+  --bg-mid: #e8eff1;
+  --bg-end: #f4fafd;
+  --surface: #ffffff;
+  --primary: #006565;
+  --primary-dark: #004f4f;
+  --accent: #76d6d5;
+  --text: #161d1f;
+  --text-secondary: #3e4949;
+  --text-muted: #6e7979;
+  --win: #2f8f5b;
+  --slip: #c47a12;
+  --border: rgba(22, 29, 31, 0.1);
+  --max: 42rem;
+  --font: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 120% 80% at 10% -10%, rgba(118, 214, 213, 0.35), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 100% 0%, rgba(0, 101, 101, 0.12), transparent 50%),
+    linear-gradient(165deg, var(--bg) 0%, var(--bg-mid) 48%, var(--bg-end) 100%);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+}
+
+.brand img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.65rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: var(--primary);
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3.5rem;
+}
+
+.hero {
+  padding: 2.5rem 0 2rem;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-brand img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 1rem;
+}
+
+.hero-brand span {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--primary-dark);
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.75rem, 5vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.hero .lede {
+  margin: 0 0 1.75rem;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 34rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.65rem;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+}
+
+.button-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.button-primary:hover {
+  background: var(--primary-dark);
+  color: #fff;
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--primary);
+  border-color: rgba(0, 101, 101, 0.35);
+}
+
+.button-ghost:hover {
+  background: rgba(0, 101, 101, 0.06);
+  color: var(--primary-dark);
+}
+
+.section {
+  margin-top: 2.75rem;
+  padding-top: 0.25rem;
+}
+
+.section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.section p,
+.section li {
+  color: var(--text-secondary);
+}
+
+.section ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.section li + li {
+  margin-top: 0.4rem;
+}
+
+.pillars {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .pillars {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+.pillar h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.pillar p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.win {
+  color: var(--win);
+  font-weight: 700;
+}
+
+.slip {
+  color: var(--slip);
+  font-weight: 700;
+}
+
+.note {
+  margin-top: 2rem;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.confirm-list {
+  margin: 1rem 0 0;
+  padding: 1rem 1.15rem 1rem 2rem;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.confirm-list li + li {
+  margin-top: 0.5rem;
+}
+
+.page-title {
+  margin: 0.5rem 0 0.35rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.meta {
+  margin: 0 0 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.policy h2 {
+  margin: 2.25rem 0 0.65rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.policy h3 {
+  margin: 1.35rem 0 0.45rem;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.policy p,
+.policy li {
+  color: var(--text-secondary);
+}
+
+.policy ul {
+  padding-left: 1.2rem;
+}
+
+.policy table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0 1rem;
+  font-size: 0.9rem;
+}
+
+.policy th,
+.policy td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.policy th {
+  background: rgba(0, 101, 101, 0.08);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.needs-confirm {
+  display: inline;
+  padding: 0.05rem 0.35rem;
+  border-radius: 0.25rem;
+  background: #fde8c8;
+  color: #7a4a08;
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+.site-footer {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer a:hover {
+  color: var(--primary);
+}
+
+.draft-banner {
+  margin: 0 0 1.5rem;
+  padding: 0.85rem 1rem;
+  background: #fff4c2;
+  border: 1px solid rgba(196, 122, 18, 0.35);
+  border-radius: 0.65rem;
+  color: #5c3d08;
+  font-size: 0.9rem;
+}
